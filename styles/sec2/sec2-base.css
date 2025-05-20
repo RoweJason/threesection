@@ -1,0 +1,34 @@
+#sec2-root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+.sec2-outer {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    /* height: 100vh; */
+    justify-content: center;
+    align-items: center;
+}
+
+.sec2-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+/* 奇偶页背景色不同, 调试用，后面删 */
+section:nth-child(odd) {
+    background-color: #767676;
+}
+.necklace {
+    position: absolute;
+    /* top: 150vh; */
+}
+.txt-sm {
+    font-size: 40px;
+}
