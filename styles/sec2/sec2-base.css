@@ -6,6 +6,7 @@
     position: relative;
 }
 .sec2-outer {
+    position: relative;
     flex-direction: column;
     display: flex;
     width: 100%;
@@ -23,12 +24,16 @@
 }
 /* 奇偶页背景色不同, 调试用，后面删 */
 section:nth-child(odd) {
-    background-color: #767676;
+    background-color: rgba(118, 118, 118, 0.5);
 }
 .necklace {
     position: absolute;
-    /* top: 150vh; */
+    transform: translateY(125vh);
+    z-index: -1;
 }
 .txt-sm {
     font-size: 40px;
+}
+.gunfire {
+    justify-content: left;
 }
