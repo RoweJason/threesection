@@ -1,11 +1,11 @@
-#sec2-root {
+#sec3-root {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     position: relative;
 }
-.sec2-outer {
+.sec3-outer {
     position: relative;
     flex-direction: column;
     display: flex;
@@ -14,8 +14,7 @@
     justify-content: center;
     align-items: center;
 }
-
-.sec2-container {
+.sec3-container {
     display: flex;
     width: 100%;
     height: 100vh;
@@ -25,12 +24,4 @@
 /* 奇偶页背景色不同, 调试用，后面删 */
 section:nth-child(odd) {
     background-color: rgba(118, 118, 118, 0.5);
-}
-.necklace {
-    position: absolute;
-    transform: translateY(125vh);
-    z-index: -1;
-}
-.gunfire {
-    justify-content: left;
 }
