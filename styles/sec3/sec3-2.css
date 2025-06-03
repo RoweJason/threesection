@@ -1,0 +1,41 @@
+.rainbow3-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.rainbow3 {
+    position: absolute;;
+    left: 34%;
+    top: -20%;
+    z-index: 1;
+}
+.mountain-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.mountain1-container {
+    position: absolute;
+    top: 0;
+    left: 2vw;
+    width: 100%;
+    height: 100%;
+}
+.mountain2-container {
+    position: absolute;
+    top: 0;
+    left: 60vw;
+    width: 100%;
+    height: 100%;
+}
+.mountain3-container {
+    position: absolute;
+    top: 0;
+    left: 34vw;
+    width: 100%;
+    height: 100%;
+}

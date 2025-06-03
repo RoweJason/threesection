@@ -20,8 +20,12 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 /* 奇偶页背景色不同, 调试用，后面删 */
 section:nth-child(odd) {
     background-color: rgba(118, 118, 118, 0.5);
+}
+section:nth-child(even) {
+    background-color: rgba(129, 43, 43, 0.5);
 }
