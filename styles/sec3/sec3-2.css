@@ -7,8 +7,8 @@
 }
 .rainbow3 {
     position: absolute;;
-    left: 34%;
-    top: -20%;
+    left: 34vw;
+    top: -20vh;
     z-index: 1;
 }
 .mountain-container {
@@ -26,13 +26,13 @@
 }
 .mountain2-container {
     position: absolute;
-    top: 50%;
+    top: 50vh;
     left: 34vw;
     /* height: 100%; */
 }
 .mountain3-container {
     position: absolute;
-    top: 20%;
+    top: 20vw;
     left: 70vw;
     /* height: 100%; */
 }
