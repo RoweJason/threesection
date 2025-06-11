@@ -1,3 +1,27 @@
+.sec2-container-2 {
+    justify-content: left;
+    flex-direction: column;
+    height: 130vh;
+}
+.en-list {
+    width: 100%;
+    padding-right: 8vw;
+    font-size: 100px;
+    font-weight: 600;
+}
+.en-list > div{
+    text-align: end;
+}
+/* 英文文本列表 */
+.gunfire-en-list > div:nth-child(1),
+.gunfire-en-list > div:nth-child(2) {
+    color: #535353;
+}
+.gunfire-en-list > div:nth-child(3){
+    color: #757575;
+    font-size: 150px;
+}
+
 .fear {
     position: absolute;
     width: 100%;
@@ -22,6 +46,23 @@
     font-size: 100px;
     position: relative;
 }
+
+.sec2-container-4 {
+    flex-direction: column;
+    height: 130vh;
+}
+/* 英文文本列表 */
+.tank-en-list > div:nth-child(1){
+    color: #6D6D6D;
+}
+.tank-en-list > div:nth-child(2),
+.tank-en-list > div:nth-child(3)
+{
+    color: #4E4E4E;
+    font-size: 50px;
+}
+
+
 .large-txt {
     font-size: 100px;
     font-weight: 600;
@@ -30,7 +71,6 @@
 }
 .tank-txt {
     white-space: pre-line;
-    width: 100vw; 
     position: relative;
     font-style: normal;
 }
@@ -38,20 +78,51 @@
     width: 50vw;
     position: absolute;
 }
-.sec2-container-5,.sec2-container-6 {
-    width: 100%;
+/* 太阳花背景 */
+.sec2-container-5 {
+    background: url(../../assets/images/sec2/bg1.png);
+    /* 背景等比例缩放不重复 */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-direction: column;
+    position: relative;
 }
+.blood-en-list{
+    font-size: 30px;
+    /* 保留回车 */
+    white-space: pre-line;
+    position: absolute;
+    top: 0;
+    text-align: end;
+    color: #FFF;
+    font-weight: 400;
+}
+
 .jets-txt {
     width: 100%;
     padding-left: 10vw;
-    padding-top: 10vh;
-    height: 100%;
+    padding-right: 8vw;
 }
-.sec2-container-7 {
+.jets-en{
+    text-align: end;
+    font-size: 80px;
+    color: #5A5A5A;
+    font-weight: 600;
+}
+.jets-en2 {
+    font-size: 30px;
+    margin: 20vh 0;
+    white-space: pre-line;
+    text-align: center;
+}
+.sec2-container-7{
+    height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
+.sec2-container-8 {
+    flex-direction: column;
 }
 .jets-field {
     width: 100%;
