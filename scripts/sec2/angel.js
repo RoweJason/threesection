@@ -1,4 +1,4 @@
-const nk = document.querySelector(".necklace");
+const nk = document.querySelector(".angel");
 const sec2_2 = document.querySelector(".sec2-container-2");
 const sec2_outer = document.querySelector(".sec2-outer")
 gsap.registerPlugin(ScrollTrigger);
@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.create({
     trigger: sec2_outer,
     scrub: true,
-    start: "1500 top",
+    start: "1300 top",
     end: "bottom bottom",
     markers: true,
     pin: nk

@@ -1,0 +1,9 @@
+.sec3-container-6 {
+    width: 100%;
+    height: 350vh;
+}
+.desert-container {
+    height: 100vh;
+    width: 350vw;
+    background: url(../../assets/images/sec3/desert.png);
+}

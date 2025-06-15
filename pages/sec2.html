@@ -10,11 +10,8 @@
 </head>
 
 <body>
-    <div id="sec2-root">
-        <div class="necklace">
-            <img src="../assets/images/sec2/necklace.png" alt="加载失败">
-        </div>
-        <div class="sec2-outer">
+    <div id="sec2-root smooth-wrapper">
+        <div class="sec2-outer" id="smooth-content">
             <section class="sec2-container">
                 <div class="txt-sm">战争已经打响，现在的我身负重伤</div>
             </section>
@@ -50,8 +47,8 @@
             </section>
             <section class="sec2-container sec2-container-5">
                 <div class="en-list blood-en-list">
-                    Blood splattered everywhere, 
-                    and the lingering sun in the sky was no longer beautiful, 
+                    Blood splattered everywhere,
+                    and the lingering sun in the sky was no longer beautiful,
                     as if telling thepoignant beauty of this battle
                 </div>
                 <!-- <div><img src="../assets/images/sec2/占位图.png" alt="加载失败" style="width: 100%;"></div> -->
@@ -70,16 +67,22 @@
                 </div>
             </section>
             <section class="sec2-container sec2-container-8">
-                <div class="jets-field"><img src="../assets/images/sec2/jetsfield.png" alt="加载失败" style="width: 100%;"></div>
+                <div class="jets-field"><img src="../assets/images/sec2/jetsfield.png" alt="加载失败" style="width: 100%;">
+                </div>
                 <div class="finall-txt txt-sm">我坚持不住了…</div>
             </section>
         </div>
     </div>
+    <div class="angel">
+        <img src="../assets/images/sec2/angel.png" alt="加载失败">
+    </div>
+
 
     <script src="../assets/js/gsap.min.js"></script>
     <script src="../assets/js/scrolltrigger.js"></script>
+    <script src="../assets/js/scrollsmoother.js"></script>
     <script src="../scripts/sec2/Scrolling.js"></script>
-    <script src="../scripts/sec2/Necklace.js"></script>
+    <script src="../scripts/sec2/angel.js"></script>
 </body>
 
 </html>
