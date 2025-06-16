@@ -5,19 +5,27 @@
     <meta charset="UTF-8" />
     <title>Section2</title>
     <link rel="stylesheet" href="../styles/normal.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
     <link rel="stylesheet" href="../styles/sec2/sec2-base.css">
     <link rel="stylesheet" href="../styles/sec2/sec2-1.css">
 </head>
 
 <body>
-    <div id="sec2-root smooth-wrapper">
-        <div class="sec2-outer" id="smooth-content">
-            <section class="sec2-container">
+    <div id="sec2-root">
+        <div class="sec2-start">
+            <section class="sec2-container sec2-start-1 ">
                 <div class="txt-sm">战争已经打响，现在的我身负重伤</div>
             </section>
-            <section class="sec2-container">
+            <section class="sec2-container sec2-start-2">
                 <div class="txt-sm">但天使一定会拯救我</div>
             </section>
+        </div>
+        <div class="sec2-outer" id="smooth-content" style="display: none;">
+            <div class="angel-area">
+                <div class="angel">
+                <!-- <img src="../assets/images/sec2/angel.png" alt="加载失败"> -->
+                </div>
+            </div>
             <section class="sec2-container sec2-container-2">
                 <div class="en-list gunfire-en-list">
                     <div>Surrounding me</div>
@@ -25,12 +33,14 @@
                     <div>gunfire exploding</div>
                 </div>
                 <div style="padding-left: 10vw; width: 100%;">
-                    <div class="txt-sm large-txt" style="margin-bottom: 2vh;">周围是炮火声炸响</div>
+                    <div class="txt-sm large-txt gunfire-text" style="margin-bottom: 2vh;">
+                        周围是炮火声炸响
+                    </div>
                     <div class="gunfire"><img src="../assets/images/sec2/gunfire.png" alt="加载失败"></div>
                 </div>
             </section>
             <section class="sec2-container">
-                <div class="fear"><img src="../assets/images/sec2/fear-text.png" alt="加载失败"></div>
+                <div class="fear"></div>
             </section>
             <section class="sec2-container sec2-container-4">
                 <div class="txt-sm tank-txt" style="padding-left: 10vw;">
@@ -54,11 +64,8 @@
                 <!-- <div><img src="../assets/images/sec2/占位图.png" alt="加载失败" style="width: 100%;"></div> -->
             </section>
             <section class="sec2-container sec2-container-6">
-                <div><img src="../assets/images/sec2/planearea.png" alt="加载失败" style="width: 100%;"></div>
-            </section>
-            <section class="sec2-container sec2-container-7">
                 <div class="jets-txt">
-                    <div class="txt-sm large-txt">战斗机在空中轰鸣</div>
+                    <div class="txt-sm large-txt jets-text">战斗机在空中轰鸣</div>
                     <div class="txt-sm jets-en">Fighter jets roar in the sky</div>
                 </div>
                 <div class="jets-en2">
@@ -66,23 +73,21 @@
                     became overwhelmed .....
                 </div>
             </section>
-            <section class="sec2-container sec2-container-8">
-                <div class="jets-field"><img src="../assets/images/sec2/jetsfield.png" alt="加载失败" style="width: 100%;">
-                </div>
+            <section class="sec2-container sec2-container-7">
+                <div class="jets-field"></div>
                 <div class="finall-txt txt-sm">我坚持不住了…</div>
             </section>
         </div>
     </div>
-    <div class="angel">
-        <img src="../assets/images/sec2/angel.png" alt="加载失败">
-    </div>
 
-
+    <!-- 外部库 -->
     <script src="../assets/js/gsap.min.js"></script>
     <script src="../assets/js/scrolltrigger.js"></script>
     <script src="../assets/js/scrollsmoother.js"></script>
+    <!-- 自定义 -->
     <script src="../scripts/sec2/Scrolling.js"></script>
     <script src="../scripts/sec2/angel.js"></script>
+    <script src="../scripts/sec2/animation.js"></script>
 </body>
 
 </html>

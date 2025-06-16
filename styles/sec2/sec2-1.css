@@ -2,34 +2,46 @@
     justify-content: left;
     flex-direction: column;
     height: 130vh;
+    position: relative;
 }
 .en-list {
     width: 100%;
     padding-right: 8vw;
-    font-size: 100px;
+    font-size: 70px;
     font-weight: 600;
 }
 .en-list > div{
     text-align: end;
 }
 /* 英文文本列表 */
+.gunfire-en-list {
+    margin-top: 10vh;
+}
 .gunfire-en-list > div:nth-child(1),
 .gunfire-en-list > div:nth-child(2) {
     color: #535353;
 }
 .gunfire-en-list > div:nth-child(3){
     color: #757575;
-    font-size: 150px;
+    font-size: 50px;
+}
+.gunfire-text {
+    position: absolute;
+    z-index: 3;
+    top: 13vh;
 }
 
 .fear {
     position: absolute;
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     z-index: -2;
-    top: 300vh;
-    /* transform: translateY(-20vh); */
+    background: url(../../assets/images/sec2/fear.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .tank-field {
     width: 100%;
@@ -76,7 +88,9 @@
 }
 .tank-text {
     width: 50vw;
+    top: 40vh;
     position: absolute;
+    z-index: 2;
 }
 /* 太阳花背景 */
 .sec2-container-5 {
@@ -103,8 +117,16 @@
     width: 100%;
     padding-left: 10vw;
     padding-right: 8vw;
+    position: relative;
+    top: 10vh;
+    height: 30vh;
 }
-.jets-en{
+.jets-text {
+    position: absolute;
+    z-index: 3;
+    top: -15vh;
+}
+.jets-en {
     text-align: end;
     font-size: 80px;
     color: #5A5A5A;
@@ -112,18 +134,26 @@
 }
 .jets-en2 {
     font-size: 30px;
-    margin: 20vh 0;
     white-space: pre-line;
     text-align: center;
 }
-.sec2-container-7{
+.sec2-container-6{
     height: 80vh;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
-.sec2-container-8 {
+.sec2-container-7 {
     flex-direction: column;
+    position: relative;
 }
 .jets-field {
-    width: 100%;
+    position: absolute;
+    top: -40vh;
+    width: 100vw;
+    height: 40vh;
+    background: url(../../assets/images/sec2/jetsfield.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }

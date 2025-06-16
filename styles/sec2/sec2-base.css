@@ -5,6 +5,16 @@
     width: 100%;
     position: relative;
 }
+.sec2-start {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+.sec2-start-1,
+.sec2-start-2{
+    position: absolute;
+}
+
 .sec2-outer {
     position: relative;
     flex-direction: column;
@@ -27,7 +37,15 @@ section:nth-child(odd) {
     background-color: rgba(118, 118, 118, 0.5);
 }
 .angel {
+    width: 100vw;
+    height: 80vh;
+    background: url('../../assets/images/sec2/angel.png') no-repeat center center;
+    background-size: contain;
+    top: 0;
     position: absolute;
-    transform: translateY(125vh);
-    z-index: -1;
+    /* transform: translateY(125vh); */
+    z-index: 2;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }

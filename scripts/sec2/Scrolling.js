@@ -8,8 +8,3 @@ const smoother = ScrollSmoother.create({
     smooth: 1,
     effects: true
 });
-
-const maintl = gsap.timeline({
-    
-});
-
