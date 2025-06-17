@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'MyFont';
-    src: url('../../assets/fonts/fzzj-sihaixingshu.TTF') format('truetype');
+    src: url('../assets/fonts/fzzj-sihaixingshu.TTF') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -13,24 +13,20 @@
     user-select: none;
     list-style: none;
     text-decoration: none;
-    font-family: "MyFont", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    /* font-family: "MyFont", "Microsoft YaHei", "微软雅黑", Arial, sans-serif; */
 }
 
+/* 隐藏所有滚动条，包括横向和纵向 */
 *::-webkit-scrollbar {
-    width: 0 !important
+    width: 0 !important;
+    height: 0 !important;
 }
 
 * {
-    -ms-overflow-style: none;
+    -ms-overflow-style: none; /* IE和Edge */
+    scrollbar-width: none;     /* Firefox */
 }
 
-* {
-    overflow: -moz-scrollbars-none;
-}
-
-*::-webkit-scrollbar {
-    width: 0 !important
-}
 .txt-sm {
     font-size: 40px;
 }
