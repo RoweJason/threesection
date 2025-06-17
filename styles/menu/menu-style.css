@@ -6,77 +6,103 @@
 
 body {
   background: url('../../assets/images/menu/bg.png') no-repeat center center;
-  background-size: 1920px 1080px;
+  background-size: cover;
   font-family: "Comic Sans MS", cursive, sans-serif;
   color: #333;
-  width: 1920px;
-  height: 1080px;
+  min-height: 100vh;
   margin: 0 auto;
-  overflow: hidden;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem); /* 响应式间距 */
+  flex: 1; /* 占满剩余空间 */
+  padding: clamp(1rem, 2vw, 2rem); /* 响应式内边距 */
+  max-width: 1920px; /* 限制最大宽度 */
+  margin: 0 auto;
 }
 
 .item {
-  position: absolute;
-  width: 593px;
-  height: 772px;
+  flex: 1 1 clamp(280px, 30vw, 593px); /* 动态宽度 */
+  aspect-ratio: 593/772; /* 保持原始宽高比 */
   text-align: center;
-  padding: 20px;
-  border-radius: 0;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
-  overflow: hidden; /* 防止图片放大后溢出容器 */
-}
-
-#item1 {
-  top: 116px;
-  left: 59px;
-}
-
-#item2 {
-  top: 116px;
-  left: 653px;
-}
-
-#item3 {
-  top: 116px;
-  left: 1246px;
+  padding: clamp(0.5rem, 1vw, 1rem); /* 响应式内边距 */
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .item img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 保持图片比例，覆盖容器 */
-  transition: transform 0.5s ease; /* 添加过渡效果 */
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-/* 第一个目录项图片悬停效果 */
-#item1 img:hover {
-  transform: scale(1.15); /* 放大15% */
-}
-
-/* 第二个目录项图片悬停效果 */
-#item2 img:hover {
-  transform: scale(1.2); /* 放大20% */
-}
-
-/* 第三个目录项图片悬停效果 */
-#item3 img:hover {
-  transform: scale(1.18); /* 放大18% */
-}
+/* 悬停效果保持不变 */
+#item1 img:hover { transform: scale(1.15); }
+#item2 img:hover { transform: scale(1.2); }
+#item3 img:hover { transform: scale(1.18); }
 
 .link {
   display: inline-block;
   text-decoration: none;
   color: #fff;
   background-color: #555;
-  padding: 12px 24px;
+  padding: clamp(0.75rem, 1.5vw, 1.25rem) clamp(1.5rem, 3vw, 2.5rem); /* 响应式按钮 */
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  font-size: 20px;
+  font-size: clamp(1rem, 2vw, 1.25rem); /* 响应式字体 */
+  margin: clamp(1rem, 2vw, 2rem) auto; /* 响应式边距 */
+}
+
+/* 调整各断点的布局 */
+@media (max-width: 1440px) {
+  .item {
+    flex: 1 1 clamp(250px, 28vw, 500px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .item {
+    flex: 1 1 clamp(280px, 45vw, 593px);
+  }
+}
+
+@media (max-width: 768px) {
+  .item {
+    flex: 1 1 100%;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    max-width: 90%;
+  }
+}
+
+/* 针对超宽屏幕的优化 */
+@media (min-aspect-ratio: 16/9) {
+  body {
+    background-size: contain;
+  }
+}
+
+/* 针对竖屏设备的优化 */
+@media (max-aspect-ratio: 3/4) {
+  .container {
+    padding: clamp(0.5rem, 3vw, 1.5rem) 0;
+  }
+  
+  .item {
+    flex: 1 1 90%;
+    aspect-ratio: 4/5; /* 调整为更适合竖屏的比例 */
+  }
 }
