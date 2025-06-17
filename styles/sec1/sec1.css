@@ -48,9 +48,14 @@ body {
   left: 0;
   width: 100vw; /* 左右宽度充满屏幕 */
   height: 87.04vh; /* 940px / 1080 * 100 ≈ 87.04vh */
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 0;
   opacity: 1;
+  /* 隐藏默认控件 */
+  display: block;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 /* 针对宽屏设备的优化 */
@@ -60,4 +65,17 @@ body {
     height: auto; /* 高度自动调整，保持视频比例 */
     max-height: 87.04vh; /* 限制最大高度 */
   }
+}
+
+/* 彻底隐藏视频控件 */
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+video::-webkit-media-controls-panel {
+  display: none !important;
 }

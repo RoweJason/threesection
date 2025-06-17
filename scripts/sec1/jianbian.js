@@ -24,10 +24,23 @@ pages.forEach((page, index) => {
       // 自动播放新显示页的视频（如果有）
       const nextVideo = pages[currentPageIndex].querySelector('video');
       if (nextVideo) {
+        // 设置静音以确保自动播放
+        nextVideo.muted = true;
         nextVideo.play().catch(err => {
           console.error("视频自动播放失败:", err);
         });
       }
     }, 1000); // 与过渡时间一致
   });
+});
+
+// 页面加载完成后自动播放第一页视频（如果是视频页）
+document.addEventListener('DOMContentLoaded', () => {
+  const firstVideo = pages[0].querySelector('video');
+  if (firstVideo) {
+    firstVideo.muted = true;
+    firstVideo.play().catch(err => {
+      console.error("首视频自动播放失败:", err);
+    });
+  }
 });
