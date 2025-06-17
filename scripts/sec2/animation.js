@@ -33,13 +33,13 @@ document.addEventListener('click', () => {
                 opacity: 0,
                 duration: 1,
                 stagger: 0.2,
-                ease: 'power3.out'
+                ease: 'power2.in'
             })
             .to(start2, {
                 opacity: 1,
                 duration: 1,
                 stagger: 0.2,
-                ease: 'power3.out'
+                ease: 'power2.in'
             });
     } else if (clickCount === 2) {
         const secondTimeline = gsap.timeline();
@@ -49,7 +49,7 @@ document.addEventListener('click', () => {
                 opacity: 0,
                 duration: 1,
                 stagger: 0.2,
-                ease: 'power3.out'
+                ease: 'power3.in'
             })
             // 隐藏start1和start2
             .set([start1, start2], { display: 'none' })
@@ -58,7 +58,7 @@ document.addEventListener('click', () => {
             .to(outer, {
                 opacity: 1,
                 duration: 2,
-                ease: 'power3.out'
+                ease: 'power1.in'
             })
             // gunfire文本依次出现
             .staggerFrom(gunfirelist, 1, { opacity: 0, y: 50 }, 0.2)
@@ -66,14 +66,19 @@ document.addEventListener('click', () => {
             .set(gunfire, { display: 'block', opacity: 0 })
             .to(gunfire, {
                 opacity: 1,
-                duration: 2,
-                ease: 'power3.out'
+                duration: 1,
+                ease: 'power2.in'
             })
             .set(gunfiretext, { display: 'block', opacity: 0 })
             .to(gunfiretext, {
                 opacity: 1,
                 duration: 2,
-                ease: 'power3.out'
+                ease: 'power2.in'
             })
+            .to(angel, {
+                opacity: 1,
+                duration: 1,
+                ease: 'power3.in'
+            });
     }
 });
