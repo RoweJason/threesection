@@ -4,6 +4,10 @@ const start2 = document.querySelectorAll('.sec2-start-2');
 const gunfirelist = document.querySelectorAll('.gunfire-en-list > div');
 const gunfire = document.querySelector('.gunfire');
 const gunfiretext = document.querySelector('.gunfire-text');
+// 注册ScrollTrigger插件
+gsap.registerPlugin(ScrollTrigger);
+// ScrollSmoother插件
+gsap.registerPlugin(ScrollSmoother);
 
 // Create the main timeline
 const mainTimeline = gsap.timeline();
