@@ -1,9 +1,81 @@
 .sec3-container-6 {
+    position: relative;
     width: 100%;
     height: 350vh;
+    overflow: hidden;
 }
 .desert-container {
-    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 350vw;
     background: url(../../assets/images/sec3/desert.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.desert-mountain-1 {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    height: 50%;
+    width: 40vw;
+    z-index: 3;
+    background: url(../../assets/images/sec3/mountain/mountain1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.desert-mountain-2 {
+    position: absolute;
+    top: 0;
+    left: 25vw;
+    height: 50%;
+    width: 80vw;
+    z-index: 2;
+    background: url(../../assets/images/sec3/mountain/mountain2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.desert-mountain-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80%;
+    width: 150vw;
+    z-index: 1;
+    background: url(../../assets/images/sec3/mountain/mountain3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.rainbow-lake2 {
+    position: absolute;
+    top: 70vh;
+    left: 0;
+    height: 80%;
+    width: 150vw;
+    z-index: 1;
+    background: url(../../assets/images/sec3/rainbows/rainbowlake2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.boat {
+    position: absolute;
+    left: 77vw;
+    /* top: -3.2vh; */
+    top: -5vh;
+    background: url(../../assets/images/sec3/boat.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 17vh;
+    width: 24vw;
+}
+.camel {
+    position: absolute;
+    top: 70vh;
+    right: 28vw;
+    background: url(../../assets/images/sec3/camel.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20vh;
+    width: 24vw;
 }
