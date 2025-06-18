@@ -40,6 +40,36 @@ body {
   border-radius: 0;
 }
 
+/* 文本层样式 */
+.text-layer {
+  position: absolute;
+font-family: "KaiTi", "楷体", serif; /* 修改字体为楷书 */
+  font-weight: regular;
+  font-size: 1.67vw; /* 32px相对于1920px的宽度 */
+  color: #FFFFFF;
+  text-align: left;
+  line-height: normal;
+  text-shadow: 0px 0px 0.64vw rgba(0, 0, 0, 1); /* 12.2px相对于1920px的宽度 */
+  opacity: 1;
+  white-space: nowrap;
+}
+
+/* 第一个文本层位置 */
+#text1 {
+  left: 40.83vw; /* 784px相对于1920px的宽度 */
+  top: 83.52vh; /* 902px相对于1080px的高度 */
+  width: 18.33vw; /* 352px相对于1920px的宽度 */
+  height: 3.15vh; /* 34px相对于1080px的高度 */
+}
+
+/* 第二个文本层位置 */
+#text2 {
+  left: 36.67vw; /* 704px相对于1920px的宽度 */
+  top: 90.28vh; /* 975px相对于1080px的高度 */
+  width: 26.67vw; /* 512px相对于1920px的宽度 */
+  height: 3.15vh; /* 34px相对于1080px的高度 */
+}
+
 /* 针对宽屏设备的优化 */
 @media (min-aspect-ratio: 16/9) {
   .page video {
@@ -48,4 +78,3 @@ body {
     max-height: 87.04vh; /* 限制最大高度 */
   }
 }
-
