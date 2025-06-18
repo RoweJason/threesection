@@ -30,7 +30,12 @@
     background-repeat: no-repeat;
     /* 背景拉伸占满 */
     background-size: cover;
-    mask-image: linear-gradient(180deg, #000 0%, #0000 calc(var(--scroll_progress1) * 100%));
+    /* 顶部半透明遮罩 + 原有遮罩 */
+    mask-image:
+        linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,1) 8%, #000 16%, #000 100%),
+        linear-gradient(180deg, #000 0%, #0000 calc(var(--scroll_progress1) * 100%));
+    mask-composite: intersect;
+    -webkit-mask-composite: destination-in;
 }
 .rainbow2 {
     position: absolute;
@@ -43,7 +48,11 @@
     /* 变量初始为0 */
     --scroll_progress2: 0;
     background: linear-gradient(90deg, red, yellow, skyblue, pink);
-    mask-image: linear-gradient(180deg, #000 0%, #0000 calc(var(--scroll_progress2) * 100%));
+    /* 同彩虹1顶部半透明遮罩 + 原有遮罩  */
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,1) 8%, #000 16%, #000 100%),
+        linear-gradient(180deg, #000 0%, #0000 calc(var(--scroll_progress2) * 100%));
+    mask-composite: intersect;
+    -webkit-mask-composite: destination-in;
 }
 .sec3-container-3 {
     height: 60vh;

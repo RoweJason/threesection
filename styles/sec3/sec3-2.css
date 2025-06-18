@@ -1,15 +1,30 @@
-.rainbow3-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 .rainbow3 {
-    position: absolute;;
-    left: 34vw;
+    position: absolute;
     top: -20vh;
-    z-index: 1;
+    left: 73vw;
+    width: 1.5vw;
+    height: 100vh;
+     /* 变量初始为0 */
+    --scroll_progress3: 0;
+    background: linear-gradient(90deg, red, yellow, skyblue, pink);
+    /* background: url(../../assets/images/sec3/rainbow1.png); */
+    /* 背景居中不重复 */
+    background-position: center;
+    background-repeat: no-repeat;
+    /* 背景拉伸占满 */
+    background-size: cover;
+    mask-image: linear-gradient(180deg, #000 0%, #0000 calc(var(--scroll_progress3) * 100%));
+}
+.rainbow-lake1 {
+    position: absolute;
+    left: 30vw;
+    top: 60vh;
+    z-index: -1;
+    width: 40vw;
+    height: 40vh;
+
+    background: url(../../assets/images/sec3/rainbows/rainbowlake1.png) no-repeat center center;
+    background-size: contain;
 }
 .mountain-container {
     position: absolute;
@@ -32,8 +47,8 @@
 }
 .mountain3-container {
     position: absolute;
-    top: 20vw;
-    left: 70vw;
+    top: 20vh;
+    left: 68vw;
     /* height: 100%; */
 }
 .tree-container {

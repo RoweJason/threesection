@@ -4,11 +4,13 @@
     align-items: center;
     width: 100%;
     position: relative;
+    font-family: "Microsoft YaHei";
 }
 .sec2-start {
     position: relative;
     z-index: 1;
     width: 100%;
+    font-family: "MyFont";
 }
 .sec2-start-1,
 .sec2-start-2{
