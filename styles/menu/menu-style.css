@@ -60,6 +60,25 @@ body {
   font-size: clamp(1rem, 2vw, 1.25rem); /* 响应式字体 */
   margin: clamp(1rem, 2vw, 2rem) auto; /* 响应式边距 */
 }
+.eye {
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 4vw;
+  height: 5vh;
+  background: url(../../assets/images/menu/eye-close.png);
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  z-index: 10;
+}
+.eyeopen {
+  background: url(../../assets/images/menu/eye-open.png);
+}
+.eyeclose {
+  background: url(../../assets/images/menu/eye-close.png);
+}
 
 /* 调整各断点的布局 */
 @media (max-width: 1440px) {
@@ -85,24 +104,5 @@ body {
 @media (max-width: 480px) {
   .item {
     max-width: 90%;
-  }
-}
-
-/* 针对超宽屏幕的优化 */
-@media (min-aspect-ratio: 16/9) {
-  body {
-    background-size: contain;
-  }
-}
-
-/* 针对竖屏设备的优化 */
-@media (max-aspect-ratio: 3/4) {
-  .container {
-    padding: clamp(0.5rem, 3vw, 1.5rem) 0;
-  }
-  
-  .item {
-    flex: 1 1 90%;
-    aspect-ratio: 4/5; /* 调整为更适合竖屏的比例 */
   }
 }
