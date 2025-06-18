@@ -1,0 +1,142 @@
+/* 全局样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* 页面容器通用样式 */
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-color: #1D1D1D;
+}
+
+/* 初始显示第一页 */
+#page1 {
+  opacity: 1;
+  background-color: black;
+}
+
+/* 第一页和第二页的图片样式 - 保持全屏覆盖 */
+#page1 img, #page2 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 关键属性：保持图片比例并覆盖整个容器 */
+  border-radius: 0;
+}
+
+/* 第三页和第四页的背景图样式 */
+#page3 .bg-image, #page4 .bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 保持图片比例并覆盖整个容器 */
+  z-index: 0;
+}
+
+/* 滚动行样式 */
+.scroll-row {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 26.5vh; /* 286px相对于1080px */
+  display: flex;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* 向右滚动的行 */
+.scroll-row.right {
+  animation: scroll-right 20s linear infinite;
+}
+
+/* 向左滚动的行 */
+.scroll-row.left {
+  animation: scroll-left 20s linear infinite;
+}
+
+/* 滚动图片样式 */
+.scroll-img {
+  height: 100%;
+  width: auto;
+  margin-right: 1vw;
+  flex-shrink: 0;
+}
+
+/* 向右滚动动画 */
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* 向左滚动动画 */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* 文本层样式 */
+.text-layer {
+  position: absolute;
+  font-family: "KaiTi", "楷体", serif;
+  font-weight: regular;
+  font-size: 1.67vw;
+  color: #FFFFFF;
+  text-align: left;
+  line-height: normal;
+  text-shadow: 0px 0px 0.64vw rgba(0, 0, 0, 1);
+  opacity: 1;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+/* 第一个文本层位置 */
+#text1 {
+  left: 40.83vw;
+  top: 83.52vh;
+  width: 18.33vw;
+  height: 3.15vh;
+}
+
+/* 第二个文本层位置 */
+#text2 {
+  left: 36.67vw;
+  top: 90.28vh;
+  width: 26.67vw;
+  height: 3.15vh;
+}
+
+/* 针对宽屏设备的优化 */
+@media (min-aspect-ratio: 16/9) {
+  .page video {
+    width: 100vw;
+    height: auto;
+    max-height: 87.04vh;
+  }
+}
