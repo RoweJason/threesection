@@ -1,6 +1,7 @@
 // 获取所有页面元素
 const pages = document.querySelectorAll('.page');
 let currentPageIndex = 0;
+const catalogPageUrl = 'menu.html'; 
 
 // 为页面元素绑定点击事件，实现切换逻辑
 pages.forEach((page, index) => {
@@ -16,7 +17,15 @@ pages.forEach((page, index) => {
     }
 
     // 计算下一页索引
-    currentPageIndex = (currentPageIndex + 1) % pages.length;
+    if (currentPageIndex === pages.length - 1) {
+      // 如果是最后一页，跳转到目录页
+      setTimeout(() => {
+        window.location.href = catalogPageUrl;
+      }, 1000); // 等待过渡效果完成
+      return;
+    } else {
+      currentPageIndex = currentPageIndex + 1;
+    }
 
     // 下一页渐显
     setTimeout(() => {
