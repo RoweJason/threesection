@@ -71,11 +71,19 @@
 }
 .camel {
     position: absolute;
-    top: 70vh;
-    right: 28vw;
+    top: 19%;
+    right: 10%;
     background: url(../../assets/images/sec3/camel.png);
     background-size: contain;
     background-repeat: no-repeat;
     height: 20vh;
     width: 24vw;
+}
+.desert-text {
+    position: absolute;
+    top: 22%;
+    right: 9%;
+    font-size: 4vh;
+    font-family: "Myfont";
+    color: #fff;
 }

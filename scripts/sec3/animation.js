@@ -14,11 +14,20 @@ const mountain3 = document.querySelector(".mountain3-container");
 const start1 = document.querySelector(".sec3-start-1");
 
 const desert = document.querySelector(".desert-container");
+const desert_mountain1 = document.querySelector(".desert-mountain-1");
+const desert_mountain2 = document.querySelector(".desert-mountain-2");
+const desert_mountain3 = document.querySelector(".desert-mountain-3");
+const camel = document.querySelector(".camel");
 
 // 注册ScrollTrigger插件
 gsap.registerPlugin(ScrollTrigger);
 // ScrollSmoother插件
 gsap.registerPlugin(ScrollSmoother);
+const smoother = ScrollSmoother.create({
+    smooth: 1,
+    effects: true
+});
+
 
 const mainTimeline = gsap.timeline();
 // 初始化

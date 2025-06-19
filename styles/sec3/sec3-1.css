@@ -60,11 +60,12 @@
 }
 .txt-1 {
     position: absolute;
+    font-family: 'Myfont';
     z-index: 2;
     width: 100vw;
     height: 100vh;
-    font-size: 32px;
-    color: #FFFFFF;
+    font-size: 4vh;
+    color: #FFF;
     text-align: center;
 }
 .text-1 {
