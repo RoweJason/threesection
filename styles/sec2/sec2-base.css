@@ -34,9 +34,9 @@
     justify-content: center;
     align-items: center;
 }
-/* 奇偶页背景色不同, 调试用，后面删 */
-section:nth-child(odd) {
-    background-color: rgba(118, 118, 118, 0.5);
+section {
+    background-color: #000;
+    color: #fff;
 }
 .angel {
     width: 100vw;
