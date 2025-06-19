@@ -10,24 +10,64 @@
   <div class="container">
     <div class="item" id="item1">
       <!-- 图片包裹在a标签中，点击图片可跳转 -->
-      <a href="./sec3.html">
+      <a href="./sec3.html" class="openimg">
         <img src="../assets/images/menu/menu-1.png" alt="End of the Rainbow">
+      </a>
+      <a href="./hide_sec1.html" class="hideimg">
+        <img src="../assets/images/menu/hidemenu-1.png" alt="End of the Rainbow">
       </a>
     </div>
     
     <div class="item" id="item2">
       <!-- 图片包裹在a标签中，点击图片可跳转 -->
-      <a href="./sec2.html">
+      <a href="./sec2.html" class="openimg">
         <img src="../assets/images/menu/menu-2.png" alt="Angel in white">
+      </a>
+      <a href="./hide_sec2.html" class="hideimg">
+        <img src="../assets/images/menu/hidemenu-2.png" alt="Angel in white">
       </a>
     </div>
     
     <div class="item" id="item3">
       <!-- 图片包裹在a标签中，点击图片可跳转 -->
-      <a href="./sec1.html">
+      <a href="./sec1.html" class="openimg">
         <img src="../assets/images/menu/menu-3.png" alt="salt of the Earth">
+      </a>
+      <a href="./hide_sec1.html" class="hideimg">
+        <img src="../assets/images/menu/hidemenu-3.png" alt="salt of the Earth">
       </a>
     </div>
   </div>
+  <div class="eye"></div>
+
+  <script src="../assets/js/gsap.min.js"></script>
+  <script>
+    const eye = document.querySelector('.eye');
+    let isEyeOpen = false;
+    // 点击可以切换
+    eye.addEventListener('click', () => {
+      if (isEyeOpen) {
+        eye.classList.remove('eyeopen');
+        eye.classList.add('eyeclose');
+        document.querySelectorAll('.hideimg').forEach(img => {
+          img.style.display = 'none';
+        });
+        document.querySelectorAll('.openimg').forEach(img => {
+          img.style.display = 'block';
+        });
+        isEyeOpen = false;
+      } else {
+        eye.classList.remove('eyeclose');
+        eye.classList.add('eyeopen');
+        document.querySelectorAll('.hideimg').forEach(img => {
+          img.style.display = 'block';
+        });
+        document.querySelectorAll('.openimg').forEach(img => {
+          img.style.display = 'none';
+        });
+        isEyeOpen = true;
+      }
+    });
+  </script>
 </body>
 </html>
